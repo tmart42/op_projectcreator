@@ -1,0 +1,48 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Processing Plugin TSM for OP
+qgisMinimumVersion=3.0
+description=Project setup and folder creator for Omsberg & Preston proposals and projects
+version=1.5.0
+author=Tyler Martin
+email=tyler.smconsulting@gmail.com
+
+about=This QGIS plugin will extract all relevant geospatial data (EPSG:2225) for a given APN in Humboldt County and create a new project folder in O:/Projects_Civil3D/ or P:/_Proposals/ with project specific shapefile and raster data. Specifically, the resulting project GIS files will be created as follows: (1) the project parcel, (2) adjacent parcels, (3) surrounding parcels within 2500ft of the project parcel border, (4) roads and (5) streams within 5000ft of the project parcel border, (6) google earth aerial imagery, (7) 2022 NAIP imagery, (8) digital elevation raster from either USGS 1M LiDAR data or Humboldt County 10M DEM data as well as contours extracted from this data, (9) slope heatmaps in both degree (black and white) and percent (colored), as well as (10) all intersecting features from all other Humboldt County GIS data (flood zones, municipal borders, zoning classification, fire district, slope instability, etc.). This data will be organized into a QGIS project, which will be saved in the project's 'gis' folder automatically. In addition, this plugin will copy our new project template and create all other folders for the project such as 'dwg', '_documents', and so on. ALL project source files are kept in P:/OP_PROJECT_CREATOR/ and can be maintained there. Any updated files (such as the monthly parcel shapefile released at the start of each month by Humboldt County) must be renamed in the exact manner of the existing files, and then moved to its respective folder, replacing the existing County-wide source data. For any bugs, please call Tyler at (949) 525 1624. Project created in 2023, with most recent update on 8.25.23 by TSM. Current version is 1.5.0
+
+
+tracker=http://bugs
+repository=http://repo
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=yes
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=http://homepage
+category=Analysis
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+plugin_dependencies=rasterio, scikit-image
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
